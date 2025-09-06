@@ -87,11 +87,19 @@
     vscode
     warp-terminal
     lazygit
+    gemini-cli
+    gnome-keyring
+    seahorse
     #unstable.tailscale
+    (php.withExtensions ({ all, enabled }: enabled ++ (with all; [ mysqli ])))
+    phpPackages.composer
   ];
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
+
+  # Enable gnome-keyring for vscode settings sync
+  services.gnome.gnome-keyring.enable = true;
 
   # Enable Tailscale
   services.tailscale.enable = true;
