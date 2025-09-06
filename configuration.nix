@@ -93,6 +93,8 @@
     #unstable.tailscale
     (php.withExtensions ({ all, enabled }: enabled ++ (with all; [ mysqli ])))
     phpPackages.composer
+    python3
+    python3Packages.tkinter
   ];
 
   # Enable the OpenSSH daemon.

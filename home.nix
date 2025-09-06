@@ -5,6 +5,11 @@
   home.homeDirectory = "/home/fiedon";
   home.stateVersion = "25.05";
 
+  home.packages = with pkgs; [
+    uv
+    steam-run
+  ];
+
   programs.bash = {
     enable = true ;
     shellAliases = {
